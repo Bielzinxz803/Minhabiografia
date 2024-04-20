@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minha Biografia Interativa</title>
+<style>
+  /* Estilos globais */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Estilos para o cabeçalho */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Estilos para a barra de navegação */
+  nav {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+    position: relative; 
+  }
+
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+  }
+
+  nav ul li a:hover {
+    color: #aaa; 
+  }
+
+  nav ul ul {
+    display: none;
+    position: absolute;
+    top: calc(100% + 5px); 
+    left: 0; 
+    background-color: #444;
+    padding: 0;
+  }
+
+  nav ul li:hover > ul {
+    display: block;
+  }
+
+  nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul ul li a {
+    padding: 10px;
+    display: block;
+  }
+
+  /* Estilos para o conteúdo principal */
+  main {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Estilos para as seções */
+  section {
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    color: #333;
+    margin-top: 20px;
+  }
+
+  p {
+    color: #666;
+    line-height: 1.5;
+  }
+
+  /* Estilos para o rodapé */
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+  }
+
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Minha Biografia</h1>
+</header>
+<nav>
+  <ul>
+    <li>
+      <a href="index.html">Página Inicial</a>
+    </li>
+    <li>
+      <a href="port.html">Portfólio</a>
+    </li>
+    <li>
+      <a href="contact.html">Contato</a>
+    </li>
+  </ul>
+</nav>
+<main>
+  <section>
+    <h2>Minha História</h2>
+    <p>Bem-vindo(a) à minha jornada interativa. Explore minha vida e minhas experiências neste site dinâmico!</p>
+  </section>
+  <section>
+    <h2>Infância e Formação</h2>
+    <p>Nasci em um ambiente que incentivava a curiosidade e a exploração. Desde cedo, sempre me encantei com a simplicidade dos detalhes ao meu redor. Brincadeiras ao ar livre e a sensação de liberdade ao andar de bicicleta eram meus passatempos favoritos na infância, onde cada nova descoberta era uma aventura emocionante.</p>
+  </section>
+  <section>
+    <h2>Jornada de Autodescoberta</h2>
+    <p>A adolescência trouxe consigo desafios e momentos de reflexão. Durante essa fase, mergulhei profundamente em minhas paixões e valores, buscando entender quem eu era e o que queria para o meu futuro. Cada obstáculo que enfrentei foi uma oportunidade para crescer e fortalecer minha determinação em perseguir meus sonhos.</p>
+  </section>
+  <section>
+    <h2>Conquistas Pessoais</h2>
+    <p>Minha jornada tem sido marcada por conquistas que refletem minha dedicação e compromisso com o meu crescimento pessoal. Cada experiência de vida e cada desafio superado me ajudaram a expandir meus horizontes e a descobrir novas habilidades e interesses.</p>
+  </section>
+  <section>
+    <h2>Visão para o Futuro</h2>
+    <p>Ao olhar para o futuro, mantenho uma visão otimista e esperançosa. Acredito no poder da perseverança e da compaixão para superar os desafios que possam surgir. Estou pronto para enfrentar o que está por vir, confiante de que cada experiência será uma oportunidade para crescer e me tornar uma versão melhor de mim mesmo.</p>
+  </section>
+</main>
+<footer>
+  <p><a href="index.html">Voltar ao Topo</a></p>
+</footer>
+<script>
+  // Adicionando interação ao botão "Voltar ao Topo"
+  document.querySelector('footer a').addEventListener('click', function(event) {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>

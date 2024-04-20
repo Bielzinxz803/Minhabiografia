@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Site</title>
+  <style>
+    .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.cartao {
+  width: 300px;
+  height: 200px;
+  background-color: #FF69B4;
+  border-radius: 20px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.botao {
+  background: linear-gradient(45deg, #FF69B4, #FFD700); /* Fundo gradiente rosa para amarelo */
+  color: #FFFFFF; /* Cor do texto branca */
+  border: none; /* Sem borda */
+  border-radius: 50px; /* Deixa o botão redondo */
+  padding: 15px 30px; /* Espaçamento interno */
+  cursor: pointer; /* Cursor de mão ao passar por cima */
+  font-size: 16px; /* Tamanho da fonte */
+  font-weight: bold; /* Texto em negrito */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave de cor ao passar o mouse */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave */
+}
+
+.botao:hover {
+  background: linear-gradient(45deg, #FFD700, #FF69B4); /* Fundo gradiente amarelo para rosa ao passar o mouse */
+  transform: scale(1.1); /* Aumenta ligeiramente o tamanho ao passar o mouse */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Aumenta a sombra ao passar o mouse */
+}
+
+.carta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  color: #333;
+  padding: 20px;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease;
+}
+
+.cartao.aberto .carta {
+  transform: translateY(0);
+}
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="cartao" id="cartao">
+    <button onclick="abrirCarta()" class="botao">Abrir Carta</button>
+    <div class="carta" id="carta">
+      <h2>❤️ Para Larissa ❤️</h2>
+      <p>Demorou um pouco mais ficou pronto amor</p>
+      <p>Espero que goste!</p>
+      <p>❤️ Te amo! ❤️</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  function abrirCarta() {
+    document.getElementById('cartao').classList.add('aberto');
+    setTimeout(() => {
+      window.location.href = 'perfil.html';
+    }, 2000); // redireciona para outra_pagina.html após 2 segundos
+  }
+</script>
+
+</body>
+</html>
