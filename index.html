@@ -155,6 +155,8 @@
   <p><a href="index.html">Voltar ao Topo</a></p>
 </footer>
 <script>
+  var nome = (windows.promt('Qual é seu nome?'))
+  windows.alert('Bem vindo(a) a Biografia interativa' + nome)
   // Adicionando interação ao botão "Voltar ao Topo"
   document.querySelector('footer a').addEventListener('click', function(event) {
     event.preventDefault();
